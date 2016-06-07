@@ -20,9 +20,15 @@ class Car < ActiveRecord::Base
   end
 
   def info
+    {
+      mileage: self.mileage,
+      color: self.color,
+      interior: self.interior,
+      price: self.price
+    }
   end
 
   def honk
-    puts "beep"
+    "beep"
   end
 end
